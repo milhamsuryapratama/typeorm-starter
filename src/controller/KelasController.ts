@@ -12,5 +12,9 @@ export class KelasController {
   async one(request: Request, response: Response, next: NextFunction) {
     return await this.kelasRepository.findOne(request.params.id);
   }
+
+  async save(request: Request, response: Response, next: NextFunction) {
+    return await this.kelasRepository.save(request.body);
+  }
   }
 }
