@@ -1,4 +1,5 @@
 import { UserController } from "./controller/UserController";
+import { KelasController } from "./controller/KelasController";
 export const Routes = [
   {
     method: "get",
@@ -41,5 +42,11 @@ export const Routes = [
     route: "/kelas/:id",
     controller: KelasController,
     action: "one",
+  },
+  {
+    method: "put",
+    route: "/kelas/:id",
+    controller: KelasController,
+    action: "update",
   },
 ];
