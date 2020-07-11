@@ -27,4 +27,11 @@ export class SiswaController {
   async update(request: Request, response: Response, next: NextFunction) {
     return await this.siswaRepository.update(request.params.nis, request.body);
   }
+
+  async remove(request: Request, response: Response, next: NextFunction) {
+    let siswaToRemove: Siswa = await this.siswaRepository.findOne(
+      request.params.nis
+    );
+    return await this.siswaRepository.remove(siswaToRemove);
+  }
 }
