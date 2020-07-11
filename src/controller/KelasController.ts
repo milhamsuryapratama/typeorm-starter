@@ -20,5 +20,11 @@ export class KelasController {
   async update(request: Request, response: Response, next: NextFunction) {
     return await this.kelasRepository.update(request.params.id, request.body);
   }
+
+  async remove(request: Request, response: Response, next: NextFunction) {
+    let kelasToRemove: Kelas = await this.kelasRepository.findOne(
+      request.params.id
+    );
+    return await this.kelasRepository.remove(kelasToRemove);
   }
 }
