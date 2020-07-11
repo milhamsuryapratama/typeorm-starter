@@ -2,6 +2,7 @@ import { UserController } from "./controller/UserController";
 import { KelasController } from "./controller/KelasController";
 import { Siswa } from "./entity/Siswa";
 import { SiswaController } from "./controller/SiswaController";
+
 export const Routes = [
   {
     method: "get",
@@ -80,5 +81,11 @@ export const Routes = [
     route: "/siswa/:nis",
     controller: SiswaController,
     action: "update",
+  },
+  {
+    method: "delete",
+    route: "/siswa/:nis",
+    controller: SiswaController,
+    action: "remove",
   },
 ];
