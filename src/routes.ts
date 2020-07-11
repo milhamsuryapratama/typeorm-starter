@@ -31,6 +31,12 @@ export const Routes = [
     action: "all",
   },
   {
+    method: "post",
+    route: "/kelas",
+    controller: KelasController,
+    action: "save",
+  },
+  {
     method: "get",
     route: "/kelas/:id",
     controller: KelasController,
