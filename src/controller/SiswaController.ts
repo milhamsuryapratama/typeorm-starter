@@ -12,4 +12,15 @@ export class SiswaController {
   async save(request: Request, response: Response, next: NextFunction) {
     return await this.siswaRepository.save(request.body);
   }
+
+  async one(request: Request, response: Response, next: NextFunction) {
+    return await this.siswaRepository.findOne(
+      {
+        nis: request.params.nis,
+      },
+      {
+        relations: ["kelas"],
+      }
+    );
+  }
 }
