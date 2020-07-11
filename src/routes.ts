@@ -63,4 +63,10 @@ export const Routes = [
     controller: SiswaController,
     action: "all",
   },
+  {
+    method: "post",
+    route: "/siswa",
+    controller: SiswaController,
+    action: "save",
+  },
 ];
