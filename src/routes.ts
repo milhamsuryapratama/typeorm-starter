@@ -49,4 +49,10 @@ export const Routes = [
     controller: KelasController,
     action: "update",
   },
+  {
+    method: "delete",
+    route: "/kelas/:id",
+    controller: KelasController,
+    action: "remove",
+  },
 ];
