@@ -1,5 +1,7 @@
 import { UserController } from "./controller/UserController";
 import { KelasController } from "./controller/KelasController";
+import { Siswa } from "./entity/Siswa";
+import { SiswaController } from "./controller/SiswaController";
 export const Routes = [
   {
     method: "get",
@@ -54,5 +56,11 @@ export const Routes = [
     route: "/kelas/:id",
     controller: KelasController,
     action: "remove",
+  },
+  {
+    method: "get",
+    route: "/siswa",
+    controller: SiswaController,
+    action: "all",
   },
 ];
