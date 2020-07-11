@@ -16,5 +16,9 @@ export class KelasController {
   async save(request: Request, response: Response, next: NextFunction) {
     return await this.kelasRepository.save(request.body);
   }
+
+  async update(request: Request, response: Response, next: NextFunction) {
+    return await this.kelasRepository.update(request.params.id, request.body);
+  }
   }
 }
