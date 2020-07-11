@@ -8,4 +8,8 @@ export class SiswaController {
   async all(request: Request, response: Response, next: NextFunction) {
     return await this.siswaRepository.find({ relations: ["kelas"] });
   }
+
+  async save(request: Request, response: Response, next: NextFunction) {
+    return await this.siswaRepository.save(request.body);
+  }
 }
