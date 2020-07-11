@@ -69,4 +69,10 @@ export const Routes = [
     controller: SiswaController,
     action: "save",
   },
+  {
+    method: "get",
+    route: "/siswa/:nis",
+    controller: SiswaController,
+    action: "one",
+  },
 ];
