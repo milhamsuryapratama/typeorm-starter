@@ -23,4 +23,8 @@ export class SiswaController {
       }
     );
   }
+
+  async update(request: Request, response: Response, next: NextFunction) {
+    return await this.siswaRepository.update(request.params.nis, request.body);
+  }
 }
