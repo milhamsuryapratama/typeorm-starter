@@ -24,4 +24,10 @@ export const Routes = [
     controller: UserController,
     action: "remove",
   },
+  {
+    method: "get",
+    route: "/kelas",
+    controller: KelasController,
+    action: "all",
+  },
 ];
